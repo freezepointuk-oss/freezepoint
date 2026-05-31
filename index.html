@@ -1,447 +1,643 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>FreezePoint | Vehicle Air Conditioning Specialists</title>
+  <title>FreezePoint | Vehicle Air Conditioning Specialists</title>
 
-<link rel="icon" href="favicon.png">
+  <meta name="description" content="FreezePoint provides vehicle air conditioning services including AC regas, leak diagnosis, compressor diagnosis, hydrogen leak testing, workshop and mobile service across Greater Manchester and surrounding areas.">
 
-<style>
+  <link rel="icon" href="favicon.png">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-font-family:Arial,sans-serif;
-background:#f4f8fc;
-color:#071b33;
-line-height:1.6;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f8ff;
+      color: #061a33;
+      line-height: 1.6;
+    }
 
-a{
-text-decoration:none;
-}
+    a {
+      text-decoration: none;
+    }
 
-nav{
-background:#020b18;
-padding:18px 45px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-position:sticky;
-top:0;
-z-index:1000;
-}
+    /* NAVIGATION */
+    .navbar {
+      background: #020b18;
+      padding: 18px 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
 
-nav img{
-height:70px;
-}
+    .navbar img.logo {
+      height: 70px;
+      width: auto;
+      object-fit: contain;
+    }
 
-.nav-links{
-display:flex;
-align-items:center;
-gap:22px;
-flex-wrap:wrap;
-}
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
 
-.nav-links a{
-color:white;
-font-weight:bold;
-font-size:14px;
-}
+    .nav-right a {
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+    }
 
-.social-icons img{
-height:32px;
-width:32px;
-margin-left:8px;
-transition:0.2s;
-}
+    .nav-right a:hover {
+      color: #00a8ff;
+    }
 
-.social-icons img:hover{
-transform:scale(1.08);
-}
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-.hero{
-background:linear-gradient(135deg,#061a33,#0078d7);
-color:white;
-text-align:center;
-padding:90px 20px 100px;
-}
+    .social-icons img {
+      width: 36px;
+      height: 36px;
+      display: block;
+      transition: transform 0.2s ease;
+    }
 
-.hero h1{
-font-size:58px;
-line-height:1.1;
-margin-bottom:18px;
-}
+    .social-icons img:hover {
+      transform: scale(1.08);
+    }
 
-.hero h1 span{
-color:#00b7ff;
-}
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(90deg, rgba(2,11,24,0.96) 0%, rgba(2,11,24,0.88) 38%, rgba(2,11,24,0.20) 75%),
+        url("hero-banner.png");
+      background-size: cover;
+      background-position: center right;
+      color: white;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      padding: 70px 34px 95px;
+    }
 
-.hero p{
-font-size:22px;
-max-width:850px;
-margin:0 auto 18px;
-}
+    .hero-content {
+      max-width: 570px;
+    }
 
-.hero-location{
-font-size:18px;
-margin-bottom:30px;
-color:#eaf6ff;
-}
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      margin-bottom: 18px;
+      font-weight: 800;
+    }
 
-.buttons{
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-}
+    .hero h1 span {
+      color: #00a8ff;
+      display: block;
+    }
 
-.btn{
-display:inline-block;
-padding:17px 26px;
-border-radius:10px;
-font-weight:bold;
-font-size:17px;
-transition:0.2s;
-}
+    .hero-services {
+      font-size: 22px;
+      margin-bottom: 18px;
+      color: #ffffff;
+    }
 
-.btn:hover{
-transform:translateY(-2px);
-}
+    .hero-location {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 18px;
+      max-width: 520px;
+      margin-bottom: 28px;
+      color: #eaf6ff;
+    }
 
-.call{
-background:white;
-color:#061a33;
-}
+    .pin {
+      color: #00a8ff;
+      font-size: 28px;
+      line-height: 1;
+    }
 
-.whatsapp{
-background:#25d366;
-color:white;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
 
-.trust{
-background:#061a33;
-color:white;
-max-width:1120px;
-margin:-38px auto 50px;
-padding:22px;
-border-radius:14px;
-display:grid;
-grid-template-columns:repeat(5,1fr);
-gap:15px;
-text-align:center;
-font-weight:bold;
-box-shadow:0 8px 25px rgba(0,0,0,0.25);
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 22px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: 800;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
 
-section{
-max-width:1120px;
-margin:auto;
-padding:35px 20px;
-}
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
 
-h2{
-text-align:center;
-font-size:40px;
-margin-bottom:35px;
-}
+    .btn-call {
+      background: white;
+      color: #061a33;
+    }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:24px;
-}
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
 
-.card{
-background:white;
-padding:32px;
-border-radius:18px;
-min-height:240px;
-box-shadow:0 8px 24px rgba(0,0,0,0.09);
-transition:0.2s;
-}
+    .btn img {
+      width: 34px;
+      height: 34px;
+    }
 
-.card:hover{
-transform:translateY(-5px);
-}
+    /* TRUST BAR */
+    .trust-bar {
+      max-width: 1120px;
+      margin: -36px auto 38px;
+      background: #061a33;
+      color: white;
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.28);
+      position: relative;
+      z-index: 5;
+    }
 
-.card .icon{
-font-size:42px;
-margin-bottom:14px;
-}
+    .trust-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-align: center;
+      padding: 6px 14px;
+      border-right: 1px solid rgba(255,255,255,0.25);
+      font-size: 15px;
+      font-weight: 700;
+    }
 
-.card h3{
-color:#0078d7;
-font-size:24px;
-margin-bottom:12px;
-}
+    .trust-item:last-child {
+      border-right: none;
+    }
 
-.bottom{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:24px;
-max-width:1120px;
-margin:40px auto;
-padding:0 20px;
-}
+    .trust-icon {
+      font-size: 28px;
+      color: #00a8ff;
+    }
 
-.box{
-padding:34px;
-border-radius:18px;
-box-shadow:0 8px 24px rgba(0,0,0,0.09);
-}
+    /* MAIN SECTIONS */
+    section {
+      max-width: 1120px;
+      margin: auto;
+      padding: 22px 20px;
+    }
 
-.contact{
-background:#061a33;
-color:white;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 34px;
+    }
 
-.contact a{
-display:block;
-color:white;
-font-weight:bold;
-margin-top:12px;
-font-size:18px;
-}
+    .section-title h2 {
+      font-size: 40px;
+      line-height: 1.2;
+      color: #061a33;
+      margin-bottom: 12px;
+    }
 
-.areas{
-background:white;
-}
+    .underline {
+      width: 72px;
+      height: 4px;
+      background: #0078ff;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
 
-footer{
-background:#020b18;
-color:white;
-text-align:center;
-padding:32px;
-}
+    /* SERVICES */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
 
-.footer-icons{
-margin-bottom:15px;
-}
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
 
-.footer-icons img{
-height:34px;
-width:34px;
-margin:0 8px;
-}
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
 
-@media(max-width:900px){
+    .service-image {
+      height: 170px;
+      overflow: hidden;
+      background: #dbe9f7;
+    }
 
-.hero h1{
-font-size:40px;
-}
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
-.grid,
-.bottom,
-.trust{
-grid-template-columns:1fr;
-}
+    .service-content {
+      padding: 24px;
+      position: relative;
+      flex: 1;
+    }
 
-nav{
-justify-content:center;
-text-align:center;
-}
+    .service-content h3 {
+      color: #0078ff;
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 12px;
+      padding-right: 54px;
+    }
 
-}
+    .service-content p {
+      font-size: 16px;
+      color: #061a33;
+      padding-right: 44px;
+    }
 
-</style>
+    .card-icon {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      border: 2px solid #0078ff;
+      border-radius: 50%;
+      color: #0078ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      background: white;
+    }
+
+    /* BOTTOM CONTACT + AREAS */
+    .bottom-grid {
+      max-width: 1120px;
+      margin: 38px auto 36px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 24px;
+    }
+
+    .contact-box,
+    .areas-box {
+      border-radius: 18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+      overflow: hidden;
+    }
+
+    .contact-box {
+      background: #061a33;
+      color: white;
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      background: #0078ff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+    }
+
+    .contact-box h3,
+    .areas-box h3 {
+      font-size: 26px;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .contact-box a {
+      color: white;
+      display: block;
+      font-size: 19px;
+      font-weight: 700;
+      margin-top: 8px;
+    }
+
+    .areas-box {
+      background:
+        linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.88) 62%, rgba(224,240,255,0.85) 100%);
+      padding: 34px;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 18px;
+      position: relative;
+    }
+
+    .areas-icon {
+      width: 64px;
+      height: 64px;
+      background: #0078ff;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020b18;
+      color: white;
+      text-align: center;
+      padding: 26px 20px 30px;
+    }
+
+    footer .follow {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    footer .footer-icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    footer .footer-icons img {
+      width: 36px;
+      height: 36px;
+    }
+
+    footer p {
+      font-size: 15px;
+      color: #d8e8f7;
+    }
+
+    /* MOBILE */
+    @media (max-width: 950px) {
+      .hero {
+        background:
+          linear-gradient(90deg, rgba(2,11,24,0.96), rgba(2,11,24,0.88)),
+          url("hero-banner.png");
+        background-size: cover;
+        background-position: center;
+        padding: 58px 24px 84px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-services {
+        font-size: 18px;
+      }
+
+      .trust-bar,
+      .services-grid,
+      .bottom-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.20);
+      }
+
+      .trust-item:last-child {
+        border-bottom: none;
+      }
+
+      .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 20px;
+      }
+
+      .nav-right {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .contact-box,
+      .areas-box {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
+  <nav class="navbar">
+    <a href="#">
+      <img class="logo" src="logo.png" alt="FreezePoint logo">
+    </a>
 
-<img src="logo.png" alt="FreezePoint Logo">
+    <div class="nav-right">
+      <a href="#">HOME</a>
+      <a href="#services">SERVICES</a>
+      <a href="#areas">AREAS COVERED</a>
+      <a href="#contact">CONTACT</a>
 
-<div class="nav-links">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
 
-<a href="#">HOME</a>
-<a href="#services">SERVICES</a>
-<a href="#areas">AREAS COVERED</a>
-<a href="#contact">CONTACT</a>
+        <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </nav>
 
-<div class="social-icons">
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Vehicle Air Conditioning <span>Specialists</span></h1>
 
-<a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-</a>
+      <div class="hero-services">
+        AC Regas <span style="color:#00a8ff;">•</span>
+        Leak Diagnosis <span style="color:#00a8ff;">•</span>
+        Compressor Testing <span style="color:#00a8ff;">•</span>
+        Hydrogen Leak Detection
+      </div>
 
-<a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-</a>
+      <div class="hero-location">
+        <div class="pin">📍</div>
+        <div>Workshop & mobile service available across Greater Manchester and surrounding areas.</div>
+      </div>
 
-</div>
+      <div class="hero-buttons">
+        <a class="btn btn-call" href="tel:+447401920022">
+          📞 Call us to book your service today
+        </a>
 
-</div>
+        <a class="btn btn-whatsapp" href="https://wa.me/447401920022" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          Message us on WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
 
-</nav>
+  <div class="trust-bar">
+    <div class="trust-item"><span class="trust-icon">❄️</span> Mobile Service Available</div>
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Professional & Reliable</div>
+    <div class="trust-item"><span class="trust-icon">⏱️</span> Fast Response Times</div>
+    <div class="trust-item"><span class="trust-icon">✅</span> Honest Advice Always</div>
+    <div class="trust-item"><span class="trust-icon">£</span> Competitive Prices</div>
+  </div>
 
-<header class="hero">
+  <section id="services">
+    <div class="section-title">
+      <h2>Our Vehicle AC Services</h2>
+      <div class="underline"></div>
+    </div>
 
-<h1>
-Vehicle Air Conditioning
-<br>
-<span>Specialists</span>
-</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="ac-regas.png" alt="Vehicle AC gas refill and regas service">
+        </div>
+        <div class="service-content">
+          <h3>AC Gas Refill / Regas</h3>
+          <p>Restore your vehicle’s cooling performance with professional air conditioning gas refill service.</p>
+          <div class="card-icon">❄️</div>
+        </div>
+      </div>
 
-<p>
-AC Regas • Leak Diagnosis • Compressor Testing • Hydrogen Leak Detection
-</p>
+      <div class="service-card">
+        <div class="service-image">
+          <img src="diagnostics.png" alt="Vehicle AC leak diagnosis">
+        </div>
+        <div class="service-content">
+          <h3>Leak Diagnosis</h3>
+          <p>We diagnose AC leaks to identify why your system is losing gas or not cooling properly.</p>
+          <div class="card-icon">🔍</div>
+        </div>
+      </div>
 
-<div class="hero-location">
-Workshop & mobile service available across Greater Manchester and surrounding areas.
-</div>
+      <div class="service-card">
+        <div class="service-image">
+          <img src="mobile-service.png" alt="Mobile vehicle AC service">
+        </div>
+        <div class="service-content">
+          <h3>Mobile AC Service</h3>
+          <p>Workshop and mobile service available. We can come to you at home, work or roadside where possible.</p>
+          <div class="card-icon">🚚</div>
+        </div>
+      </div>
 
-<div class="buttons">
+      <div class="service-card">
+        <div class="service-image">
+          <img src="diagnostics.png" alt="Vehicle AC compressor diagnosis">
+        </div>
+        <div class="service-content">
+          <h3>Compressor Diagnosis</h3>
+          <p>Testing and fault finding for weak or faulty AC compressors and related components.</p>
+          <div class="card-icon">⚙️</div>
+        </div>
+      </div>
 
-<a class="btn call" href="tel:+447401920022">
-Call us to book your service today
-</a>
+      <div class="service-card">
+        <div class="service-image">
+          <img src="collage.png" alt="Vehicle AC hydrogen leak testing">
+        </div>
+        <div class="service-content">
+          <h3>Hydrogen Leak Testing</h3>
+          <p>Accurate hydrogen testing to detect even small leaks in your vehicle air conditioning system.</p>
+          <div class="card-icon">💧</div>
+        </div>
+      </div>
 
-<a class="btn whatsapp" href="https://wa.me/447401920022" target="_blank">
-Message us on WhatsApp
-</a>
+      <div class="service-card">
+        <div class="service-image">
+          <img src="ac-regas.png" alt="Vehicle AC pressure testing">
+        </div>
+        <div class="service-content">
+          <h3>Pressure Testing</h3>
+          <p>System pressure checks to assess performance and identify faults before refilling gas.</p>
+          <div class="card-icon">⏱️</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <div class="bottom-grid">
+    <div class="contact-box" id="contact">
+      <div class="contact-icon">📞</div>
+      <div>
+        <h3>Need Your Car AC Fixed?</h3>
+        <p>Call or WhatsApp FreezePoint today.</p>
+        <a href="tel:+447401920022">+44 7401 920022</a>
+        <a href="https://wa.me/447401920022" target="_blank">WhatsApp Us</a>
+        <a href="https://freezepoint.co.uk">freezepoint.co.uk</a>
+      </div>
+    </div>
 
-</header>
+    <div class="areas-box" id="areas">
+      <div class="areas-icon">📍</div>
+      <div>
+        <h3>Areas We Cover</h3>
+        <p>
+          Greater Manchester, Manchester, Wigan, Blackpool, Preston, Huddersfield,
+          Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley, Burnley and surrounding areas.
+        </p>
+      </div>
+    </div>
+  </div>
 
-<div class="trust">
+  <footer>
+    <div class="follow">Follow Us</div>
 
-<div>❄️ Mobile Service</div>
-<div>🔧 Workshop Available</div>
-<div>⚡ Fast Response</div>
-<div>✅ Honest Advice</div>
-<div>💷 Competitive Prices</div>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
 
-</div>
+      <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+    </div>
 
-<section id="services">
-
-<h2>Our Vehicle AC Services</h2>
-
-<div class="grid">
-
-<div class="card">
-<div class="icon">❄️</div>
-<h3>AC Gas Refill / Regas</h3>
-<p>
-Restore your vehicle’s cooling performance with professional air conditioning gas refill service.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🔍</div>
-<h3>Leak Diagnosis</h3>
-<p>
-We diagnose AC leaks to identify why your system is losing gas or not cooling properly.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🚗</div>
-<h3>Mobile AC Service</h3>
-<p>
-Workshop and mobile service available. We can come to you at home, work or roadside where possible.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">⚙️</div>
-<h3>Compressor Diagnosis</h3>
-<p>
-Testing and fault finding for weak or faulty AC compressors and related components.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">🧪</div>
-<h3>Hydrogen Leak Testing</h3>
-<p>
-Accurate hydrogen testing to detect even small leaks in your vehicle air conditioning system.
-</p>
-</div>
-
-<div class="card">
-<div class="icon">📊</div>
-<h3>Pressure Testing</h3>
-<p>
-System pressure checks to assess performance and identify faults before refilling gas.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<div class="bottom">
-
-<div class="box contact" id="contact">
-
-<h2>Need Your Car AC Fixed?</h2>
-
-<p>Call or WhatsApp FreezePoint today.</p>
-
-<a href="tel:+447401920022">
-📞 +44 7401 920022
-</a>
-
-<a href="https://wa.me/447401920022" target="_blank">
-💬 WhatsApp Us
-</a>
-
-<a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank">
-Facebook
-</a>
-
-<a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank">
-Instagram
-</a>
-
-</div>
-
-<div class="box areas" id="areas">
-
-<h2>Areas We Cover</h2>
-
-<p>
-Greater Manchester, Manchester, Wigan, Blackpool, Preston, Huddersfield, Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley, Burnley and surrounding areas.
-</p>
-
-</div>
-
-</div>
-
-<footer>
-
-<div class="footer-icons">
-
-<a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-</a>
-
-<a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-</a>
-
-<a href="https://wa.me/447401920022" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-</a>
-
-</div>
-
-<p>
-© 2026 FreezePoint. Vehicle Air Conditioning Specialists.
-</p>
-
-</footer>
+    <p>© 2026 FreezePoint. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
