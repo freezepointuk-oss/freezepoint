@@ -31,7 +31,7 @@
     .navbar {
       background: #020b18;
       padding: 18px 34px;
-      min-height: 135px;
+      min-height: 118px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -40,10 +40,10 @@
     }
 
     .logo {
-  height: 120px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+      height: 100px;
+      width: auto;
+      display: block;
+      object-fit: contain;
     }
 
     .nav-right {
@@ -57,6 +57,7 @@
       color: white;
       font-size: 14px;
       font-weight: 800;
+      letter-spacing: 0.2px;
     }
 
     .nav-right a:hover,
@@ -79,6 +80,11 @@
       width: 38px;
       height: 38px;
       display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.08);
     }
 
     .hero {
@@ -113,13 +119,13 @@
       display: block;
     }
 
-   .hero-services {
-  font-size: 21px;
-  line-height: 1.45;
-  margin-bottom: 18px;
-  max-width: 520px;
-  text-align: left;
-}
+    .hero-services {
+      font-size: 21px;
+      line-height: 1.45;
+      margin-bottom: 18px;
+      max-width: 520px;
+      text-align: left;
+    }
 
     .blue-dot {
       color: #00a8ff;
@@ -127,16 +133,16 @@
     }
 
     .hero-location {
-  display: grid;
-  grid-template-columns: 28px 1fr;
-  gap: 12px;
-  align-items: start;
-  font-size: 17px;
-  line-height: 1.45;
-  max-width: 520px;
-  margin-bottom: 28px;
-  color: #eaf6ff;
-}
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 12px;
+      align-items: start;
+      font-size: 17px;
+      line-height: 1.45;
+      max-width: 520px;
+      margin-bottom: 28px;
+      color: #eaf6ff;
+    }
 
     .pin {
       color: #00a8ff;
@@ -144,28 +150,28 @@
       line-height: 1;
     }
 
-   .hero-buttons {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  align-items: center;
-  max-width: 520px;
-}
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: 520px;
+    }
 
     .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  border-radius: 10px;
-  padding: 15px 22px;
-  font-size: 16px;
-  font-weight: 900;
-  min-height: 68px;
-  min-width: 210px;
-  text-align: left;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 15px 22px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      min-height: 68px;
+      min-width: 210px;
+      text-align: left;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
 
     .btn:hover {
       transform: translateY(-2px);
@@ -348,6 +354,48 @@
       font-size: 28px;
     }
 
+    .vehicle-types {
+      max-width: 1120px;
+      margin: 35px auto 20px;
+      padding: 0 20px;
+    }
+
+    .vehicle-types-box {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+    }
+
+    .vehicle-types-box h2 {
+      text-align: left;
+      font-size: 32px;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .vehicle-types-box p {
+      font-size: 18px;
+      margin-bottom: 22px;
+      max-width: 850px;
+    }
+
+    .vehicle-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .vehicle-list div {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 12px;
+      padding: 14px;
+      font-weight: 800;
+      text-align: center;
+    }
+
     .bottom-grid {
       max-width: 1120px;
       margin: 38px auto 36px;
@@ -445,9 +493,10 @@
     }
 
     @media (max-width: 950px) {
-        .logo {
-    height: 100px;
-  }
+      .logo {
+        height: 90px;
+      }
+
       .navbar {
         justify-content: center;
         text-align: center;
@@ -481,7 +530,8 @@
 
       .trust-bar,
       .services-grid,
-      .bottom-grid {
+      .bottom-grid,
+      .vehicle-list {
         grid-template-columns: 1fr;
       }
 
@@ -517,6 +567,7 @@
     <div class="nav-right">
       <a class="active" href="#">HOME</a>
       <a href="#services">SERVICES</a>
+      <a href="#vehicle-types">VEHICLES</a>
       <a href="#areas">AREAS COVERED</a>
       <a href="#contact">CONTACT</a>
 
@@ -536,16 +587,16 @@
     <div class="hero-text">
       <h1>Vehicle Air Conditioning <span>Specialists</span></h1>
 
-     <div class="hero-services">
-  AC Regas <span class="blue-dot">•</span>
-  Leak Diagnosis <span class="blue-dot">•</span>
-  Compressor Testing <span class="blue-dot">•</span>
-  Hydrogen Leak Detection
-</div>
+      <div class="hero-services">
+        AC Regas <span class="blue-dot">•</span>
+        Leak Diagnosis <span class="blue-dot">•</span>
+        Compressor Testing <span class="blue-dot">•</span>
+        Hydrogen Leak Detection
+      </div>
 
       <div class="hero-location">
         <div class="pin">📍</div>
-<div>Workshop & mobile service available across Greater Manchester and surrounding areas.</div>
+        <div>Workshop & mobile service available across Greater Manchester and surrounding areas.</div>
       </div>
 
       <div class="hero-buttons">
@@ -650,6 +701,28 @@
     </div>
   </section>
 
+  <section class="vehicle-types" id="vehicle-types">
+    <div class="vehicle-types-box">
+      <h2>We Service All Types of Vehicles</h2>
+
+      <p>
+        FreezePoint provides vehicle air conditioning regas and diagnostics for a wide range of vehicles,
+        from everyday cars to larger commercial vehicles.
+      </p>
+
+      <div class="vehicle-list">
+        <div>Cars</div>
+        <div>Vans</div>
+        <div>4x4s & SUVs</div>
+        <div>MPVs</div>
+        <div>Light Commercial Vehicles</div>
+        <div>Fleet Vehicles</div>
+        <div>Taxis & Private Hire</div>
+        <div>Company Vehicles</div>
+      </div>
+    </div>
+  </section>
+
   <div class="bottom-grid">
 
     <div class="contact-box" id="contact">
@@ -686,6 +759,10 @@
 
       <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+
+      <a href="https://wa.me/447401920022" target="_blank" aria-label="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
       </a>
     </div>
 
