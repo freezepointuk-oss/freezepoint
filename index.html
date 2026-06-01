@@ -695,6 +695,54 @@
       color: white;
     }
 
+    .final-cta {
+      max-width: 1120px;
+      margin: 38px auto 20px;
+      padding: 0 20px;
+    }
+
+    .final-cta-box {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      border-radius: 18px;
+      padding: 38px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .final-cta-box h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .final-cta-box p {
+      font-size: 18px;
+      color: #eaf6ff;
+      max-width: 760px;
+    }
+
+    .final-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: flex-end;
+    }
+
+    .cta-white {
+      background: white;
+      color: #061a33;
+    }
+
+    .cta-green {
+      background: #25d366;
+      color: white;
+    }
+
     .bottom-grid {
       max-width: 1120px;
       margin: 38px auto 36px;
@@ -788,21 +836,53 @@
     footer {
       background: #020b18;
       color: white;
-      text-align: center;
-      padding: 28px 20px 32px;
+      padding: 42px 20px 28px;
     }
 
-    .follow {
-      font-size: 20px;
+    .footer-inner {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      height: 86px;
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    .footer-col h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
       font-weight: 900;
-      margin-bottom: 10px;
+      color: white;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      color: #d8e8f7;
+      font-size: 16px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .footer-col a:hover {
+      color: #00a8ff;
+    }
+
+    .footer-strong {
+      color: white;
+      font-weight: 900;
     }
 
     .footer-icons {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 14px;
-      margin-bottom: 12px;
+      margin-top: 12px;
     }
 
     .footer-icons img {
@@ -811,9 +891,14 @@
       display: block;
     }
 
-    footer p {
-      font-size: 15px;
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      text-align: center;
       color: #d8e8f7;
+      font-size: 15px;
     }
 
     @media (max-width: 950px) {
@@ -858,7 +943,9 @@
       .vehicle-list,
       .how-grid,
       .reviews-top,
-      .review-cards {
+      .review-cards,
+      .final-cta-box,
+      .footer-inner {
         grid-template-columns: 1fr;
       }
 
@@ -931,8 +1018,30 @@
       }
 
       .about-box h2,
-      .before-book-box h2 {
+      .before-book-box h2,
+      .final-cta-box h2 {
         font-size: 28px;
+      }
+
+      .final-cta-buttons {
+        justify-content: stretch;
+      }
+
+      .final-cta-buttons .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        text-align: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+
+      .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   </style>
@@ -1226,6 +1335,23 @@
     </div>
   </section>
 
+  <section class="final-cta">
+    <div class="final-cta-box">
+      <div>
+        <h2>Not Sure What Your Vehicle Needs?</h2>
+        <p>
+          Send us your vehicle make, model, location and AC issue on WhatsApp.
+          FreezePoint will advise the best next step before you book.
+        </p>
+      </div>
+
+      <div class="final-cta-buttons">
+        <a class="btn cta-white" href="tel:+447401920022">📞 Call Now</a>
+        <a class="btn cta-green" href="https://wa.me/447401920022" target="_blank">💬 WhatsApp for a Quote</a>
+      </div>
+    </div>
+  </section>
+
   <div class="bottom-grid">
 
     <div class="contact-box" id="contact">
@@ -1266,23 +1392,51 @@
   </div>
 
   <footer>
-    <div class="follow">Follow Us</div>
+    <div class="footer-inner">
 
-    <div class="footer-icons">
-      <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
+      <div class="footer-col">
+        <img class="footer-logo" src="logo.png" alt="FreezePoint logo">
+        <p>
+          <span class="footer-strong">FreezePoint</span> provides vehicle air conditioning regas, diagnostics,
+          leak testing, pressure testing and compressor fault finding across Greater Manchester and surrounding areas.
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+          </a>
 
-      <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-      </a>
+          <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          </a>
 
-      <a href="https://wa.me/447401920022" target="_blank" aria-label="WhatsApp">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-      </a>
+          <a href="https://wa.me/447401920022" target="_blank" aria-label="WhatsApp">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact FreezePoint</h3>
+        <a href="tel:+447401920022">📞 +44 7401 920022</a>
+        <a href="https://wa.me/447401920022" target="_blank">💬 WhatsApp Us</a>
+        <a href="https://share.google/j4yk6cmoqHJZRJAdz" target="_blank">⭐ Read Google Reviews</a>
+        <p><span class="footer-strong">Availability:</span><br>Workshop and mobile appointments available. Contact us for current availability.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Service Area</h3>
+        <p>
+          Greater Manchester, Manchester, Wigan, Blackpool, Preston, Huddersfield,
+          Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley, Burnley and surrounding areas.
+        </p>
+        <p><span class="footer-strong">Workshop & mobile service available.</span></p>
+      </div>
+
     </div>
 
-    <p>© 2026 FreezePoint. All rights reserved.</p>
+    <div class="footer-bottom">
+      © 2026 FreezePoint. Vehicle Air Conditioning Specialists. All rights reserved.
+    </div>
   </footer>
 
 </body>
