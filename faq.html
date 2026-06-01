@@ -1,1 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>FAQ | FreezePoint Vehicle Air Conditioning Specialists</title>
+
+  <meta name="description" content="Frequently asked questions about FreezePoint vehicle air conditioning services, including AC regas, leak diagnosis, compressor testing, hydrogen leak testing, mobile service and areas covered.">
+
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f9ff;
+      color: #061a33;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: #020b18;
+      padding: 18px 34px;
+      min-height: 118px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .nav-right a {
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-right a:hover,
+    .nav-right .active {
+      color: #00a8ff;
+    }
+
+    .nav-right .active {
+      border-bottom: 3px solid #00a8ff;
+      padding-bottom: 8px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .social-icons img {
+      width: 38px;
+      height: 38px;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.08);
+    }
+
+    .faq-hero {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      text-align: center;
+      padding: 80px 20px 90px;
+    }
+
+    .faq-hero h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+
+    .faq-hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 20px;
+      color: #eaf6ff;
+    }
+
+    .faq-wrapper {
+      max-width: 1050px;
+      margin: -45px auto 50px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .faq-intro {
+      background: #061a33;
+      color: white;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,255,255,0.28);
+    }
+
+    .faq-intro h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .faq-intro p {
+      font-size: 17px;
+      color: #eaf6ff;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .faq-item {
+      background: white;
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+      border-left: 5px solid #0078ff;
+    }
+
+    .faq-item h3 {
+      font-size: 22px;
+      color: #0078ff;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .faq-item p {
+      font-size: 17px;
+      color: #061a33;
+    }
+
+    .faq-item ul {
+      margin-top: 10px;
+      margin-left: 22px;
+      font-size: 17px;
+    }
+
+    .faq-item li {
+      margin-bottom: 6px;
+    }
+
+    .cta-box {
+      max-width: 1050px;
+      margin: 35px auto 45px;
+      padding: 0 20px;
+    }
+
+    .cta-inner {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      border-radius: 18px;
+      padding: 36px;
+      text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+    }
+
+    .cta-inner h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .cta-inner p {
+      font-size: 18px;
+      margin-bottom: 22px;
+      color: #eaf6ff;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 22px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      min-width: 210px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.94;
+    }
+
+    .btn-call {
+      background: white;
+      color: #061a33;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp img {
+      width: 30px;
+      height: 30px;
+    }
+
+    footer {
+      background: #020b18;
+      color: white;
+      text-align: center;
+      padding: 28px 20px 32px;
+    }
+
+    .follow {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .footer-icons {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+
+    .footer-icons img {
+      width: 38px;
+      height: 38px;
+      display: block;
+    }
+
+    footer p {
+      font-size: 15px;
+      color: #d8e8f7;
+    }
+
+    @media (max-width: 950px) {
+      .logo {
+        height: 90px;
+      }
+
+      .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 20px;
+      }
+
+      .nav-right {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .faq-hero h1 {
+        font-size: 40px;
+      }
+
+      .faq-hero p {
+        font-size: 18px;
+      }
+
+      .cta-inner h2 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img class="logo" src="logo.png" alt="FreezePoint logo">
+    </a>
+
+    <div class="nav-right">
+      <a href="index.html">HOME</a>
+      <a href="index.html#services">SERVICES</a>
+      <a href="index.html#vehicle-types">VEHICLES</a>
+      <a href="index.html#areas">AREAS COVERED</a>
+      <a class="active" href="faq.html">FAQ</a>
+      <a href="index.html#contact">CONTACT</a>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="faq-hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>
+      Helpful answers about vehicle AC regas, leak diagnosis, compressor testing,
+      hydrogen leak testing, mobile service and bookings with FreezePoint.
+    </p>
+  </header>
+
+  <main class="faq-wrapper">
+
+    <div class="faq-intro">
+      <h2>Not sure what your vehicle needs?</h2>
+      <p>
+        If your car AC is not blowing cold, losing gas, making unusual noises or not switching on,
+        FreezePoint can help diagnose the issue and advise the best next step.
+      </p>
+    </div>
+
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <h3>How do I know if my vehicle AC needs a regas?</h3>
+        <p>
+          Common signs include warm air from the vents, weak cooling, the AC taking too long to cool,
+          or the system not feeling as cold as it used to. A regas may help if the system is low on refrigerant,
+          but if there is a leak, diagnosis may be needed first.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you regas my AC if there is a leak?</h3>
+        <p>
+          If the system has a leak or cannot hold pressure, it may not be suitable to simply refill it.
+          A leak diagnosis or pressure test may be required before regassing. This helps avoid wasting gas
+          and helps identify the cause of the issue properly.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is hydrogen leak testing?</h3>
+        <p>
+          Hydrogen leak testing is used to help detect leaks in a vehicle air conditioning system.
+          It can be useful when a system is losing gas or when a small leak is difficult to find using basic checks.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you offer mobile vehicle AC service?</h3>
+        <p>
+          Yes. FreezePoint offers workshop and mobile service where possible. Mobile service may be available
+          at your home, workplace or roadside depending on your location, access and the type of work required.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What areas do you cover?</h3>
+        <p>
+          FreezePoint covers Greater Manchester and surrounding areas, including Manchester, Wigan, Blackpool,
+          Preston, Huddersfield, Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley and Burnley.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What types of vehicles do you service?</h3>
+        <p>
+          FreezePoint works with a wide range of vehicles, including:
+        </p>
+        <ul>
+          <li>Cars</li>
+          <li>Vans</li>
+          <li>4x4s and SUVs</li>
+          <li>MPVs</li>
+          <li>Light commercial vehicles</li>
+          <li>Taxis and private hire vehicles</li>
+          <li>Fleet and company vehicles</li>
+        </ul>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do you offer fleet or multi-vehicle pricing?</h3>
+        <p>
+          Yes. Special pricing may be available for fleet, taxi, company, garage and multi-car bookings.
+          Contact FreezePoint with the number of vehicles and the service required for a quote.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How long does an AC regas usually take?</h3>
+        <p>
+          Timing can vary depending on the vehicle and the condition of the AC system. A straightforward regas
+          is usually quicker than a full diagnosis or leak test. If there is a fault, leak or compressor issue,
+          extra testing may be required.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What if my AC stops working again after a regas?</h3>
+        <p>
+          If the AC stops cooling again soon after a regas, this can indicate a leak or another fault in the system.
+          In that case, leak diagnosis, pressure testing or compressor diagnosis may be required.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can you diagnose compressor problems?</h3>
+        <p>
+          Yes. FreezePoint offers compressor diagnosis and AC fault finding to help identify weak, faulty or
+          non-operating compressor issues, along with related system faults.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Should I book a regas or a diagnosis?</h3>
+        <p>
+          If your AC is simply not as cold as before, a regas may be suitable. If the system has lost gas quickly,
+          is not holding pressure, makes unusual noises, or has stopped working completely, a diagnosis may be the better first step.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>How do I book?</h3>
+        <p>
+          Call or WhatsApp FreezePoint with your vehicle details, location and AC issue.
+          We can then advise the best next step and arrange a suitable appointment.
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <section class="cta-box">
+    <div class="cta-inner">
+      <h2>Need help with your vehicle AC?</h2>
+      <p>
+        Send your vehicle details and AC issue, and FreezePoint will advise the best next step.
+      </p>
+
+      <div class="cta-buttons">
+        <a class="btn btn-call" href="tel:+447401920022">📞 Call +44 7401 920022</a>
+
+        <a class="btn btn-whatsapp" href="https://wa.me/447401920022" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          Message on WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="follow">Follow Us</div>
+
+    <div class="footer-icons">
+      <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+      </a>
+
+      <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      </a>
+
+      <a href="https://wa.me/447401920022" target="_blank" aria-label="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+    </div>
+
+    <p>© 2026 FreezePoint. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
