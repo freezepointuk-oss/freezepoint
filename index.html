@@ -283,6 +283,141 @@
       margin: 0 auto;
     }
 
+    .how-it-works {
+      max-width: 1120px;
+      margin: 10px auto 20px;
+      padding: 0 20px;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .how-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.09);
+      border-top: 5px solid #0078ff;
+      min-height: 230px;
+    }
+
+    .how-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #0078ff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .how-card h3 {
+      font-size: 24px;
+      color: #0078ff;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .how-card p {
+      font-size: 16px;
+      color: #061a33;
+    }
+
+    .before-book {
+      max-width: 1120px;
+      margin: 34px auto 20px;
+      padding: 0 20px;
+    }
+
+    .before-book-box {
+      background: linear-gradient(135deg, #fff7e6, #e8f4ff);
+      border: 3px solid #0078ff;
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .before-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #0078ff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+    }
+
+    .before-book-box h2 {
+      font-size: 30px;
+      color: #061a33;
+      margin-bottom: 10px;
+      font-weight: 900;
+    }
+
+    .before-book-box p {
+      font-size: 18px;
+      color: #061a33;
+      max-width: 900px;
+    }
+
+    .about-section {
+      max-width: 1120px;
+      margin: 34px auto 30px;
+      padding: 0 20px;
+    }
+
+    .about-box {
+      background: #061a33;
+      color: white;
+      border-radius: 18px;
+      padding: 36px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .about-box h2 {
+      font-size: 34px;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .about-box p {
+      font-size: 18px;
+      color: #eaf6ff;
+      margin-bottom: 14px;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .about-highlights div {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 12px;
+      padding: 14px;
+      font-weight: 900;
+      color: white;
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -609,7 +744,8 @@
       .trust-bar,
       .services-grid,
       .bottom-grid,
-      .vehicle-list {
+      .vehicle-list,
+      .how-grid {
         grid-template-columns: 1fr;
       }
 
@@ -636,7 +772,9 @@
       }
 
       .contact-box,
-      .areas-box {
+      .areas-box,
+      .before-book-box,
+      .about-box {
         grid-template-columns: 1fr;
       }
 
@@ -661,6 +799,15 @@
         display: flex;
         width: 100%;
         margin-right: 0;
+      }
+
+      .section-title h2 {
+        font-size: 32px;
+      }
+
+      .about-box h2,
+      .before-book-box h2 {
+        font-size: 28px;
       }
     }
   </style>
@@ -733,6 +880,70 @@
     <div class="trust-item"><span class="trust-icon">✅</span> Honest Advice Always</div>
     <div class="trust-item"><span class="trust-icon">£</span> Competitive Prices</div>
   </div>
+
+  <section class="how-it-works">
+    <div class="section-title">
+      <h2>How It Works</h2>
+      <div class="underline"></div>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-number">1</div>
+        <h3>Contact Us</h3>
+        <p>Call or WhatsApp us with your vehicle details, location and the AC issue you are experiencing.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="how-number">2</div>
+        <h3>We Assess the Issue</h3>
+        <p>We advise whether your vehicle may need a regas, leak diagnosis, pressure test or compressor check.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="how-number">3</div>
+        <h3>Book Your Service</h3>
+        <p>We arrange a suitable workshop or mobile appointment and complete the required AC service professionally.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="before-book">
+    <div class="before-book-box">
+      <div class="before-icon">⚠️</div>
+      <div>
+        <h2>Before You Book</h2>
+        <p>
+          If your AC gas runs out quickly, your system does not hold pressure, or the AC stops cooling soon after a refill,
+          a leak diagnosis or pressure test may be required before regassing. This helps avoid wasting gas and ensures the
+          real fault is identified properly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <div class="about-box">
+      <div>
+        <h2>About FreezePoint</h2>
+        <p>
+          FreezePoint specialises in vehicle air conditioning regas, diagnostics, leak detection and fault finding.
+          We focus on honest advice, professional testing and convenient workshop or mobile service.
+        </p>
+        <p>
+          Whether your vehicle AC is blowing warm, losing gas, making unusual noises or not switching on,
+          FreezePoint can help identify the best next step.
+        </p>
+      </div>
+
+      <div class="about-highlights">
+        <div>Vehicle AC regas and diagnostics</div>
+        <div>Leak diagnosis and pressure testing</div>
+        <div>Compressor diagnosis and AC fault finding</div>
+        <div>Workshop and mobile service available</div>
+      </div>
+    </div>
+  </section>
 
   <section id="services">
     <div class="section-title">
