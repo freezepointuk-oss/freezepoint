@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Car AC Regas Greater Manchester | FreezePoint</title>
+
+  <meta name="description" content="Professional car AC regas and vehicle air conditioning gas refill service across Greater Manchester and surrounding areas. Workshop and mobile service available.">
+
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f9ff;
+      color: #061a33;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .navbar {
+      background: #020b18;
+      padding: 18px 34px;
+      min-height: 118px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .nav-right a {
+      color: white;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+    }
+
+    .nav-right a:hover,
+    .nav-right .active {
+      color: #00a8ff;
+    }
+
+    .nav-right .active {
+      border-bottom: 3px solid #00a8ff;
+      padding-bottom: 8px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .social-icons img {
+      width: 38px;
+      height: 38px;
+      display: block;
+    }
+
+    .service-hero {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      padding: 82px 20px 92px;
+      text-align: center;
+    }
+
+    .service-hero h1 {
+      font-size: 54px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+      font-weight: 900;
+    }
+
+    .service-hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 20px;
+      color: #eaf6ff;
+    }
+
+    .content-wrap {
+      max-width: 1120px;
+      margin: -45px auto 45px;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .intro-card {
+      background: #061a33;
+      color: white;
+      border-radius: 18px;
+      padding: 34px;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+      margin-bottom: 28px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .intro-card h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .intro-card p {
+      font-size: 18px;
+      color: #eaf6ff;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.09);
+      border-left: 5px solid #0078ff;
+    }
+
+    .info-card h2 {
+      color: #0078ff;
+      font-size: 28px;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .info-card p {
+      font-size: 17px;
+      margin-bottom: 12px;
+    }
+
+    .info-card ul {
+      margin-left: 22px;
+      font-size: 17px;
+    }
+
+    .info-card li {
+      margin-bottom: 8px;
+    }
+
+    .notice-box {
+      background: linear-gradient(135deg, #fff7e6, #e8f4ff);
+      border: 3px solid #0078ff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.09);
+      margin-bottom: 28px;
+    }
+
+    .notice-box h2 {
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: #061a33;
+      font-weight: 900;
+    }
+
+    .notice-box p {
+      font-size: 18px;
+      color: #061a33;
+    }
+
+    .areas-box {
+      background: white;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.09);
+      margin-bottom: 28px;
+    }
+
+    .areas-box h2 {
+      font-size: 28px;
+      color: #0078ff;
+      margin-bottom: 14px;
+      font-weight: 900;
+    }
+
+    .area-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .area-list span {
+      background: #f4f9ff;
+      border: 2px solid #d6e9ff;
+      color: #061a33;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #061a33, #0078d7);
+      color: white;
+      border-radius: 18px;
+      padding: 38px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+    }
+
+    .cta-box h2 {
+      font-size: 34px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      font-weight: 900;
+    }
+
+    .cta-box p {
+      font-size: 18px;
+      color: #eaf6ff;
+      margin-bottom: 24px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 22px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      min-width: 210px;
+    }
+
+    .btn-call {
+      background: white;
+      color: #061a33;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    footer {
+      background: #020b18;
+      color: white;
+      padding: 42px 20px 28px;
+      margin-top: 45px;
+    }
+
+    .footer-inner {
+      max-width: 1120px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .footer-logo {
+      height: 86px;
+      width: auto;
+      margin-bottom: 16px;
+    }
+
+    .footer-col h3 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: white;
+    }
+
+    .footer-col p,
+    .footer-col a {
+      color: #d8e8f7;
+      font-size: 16px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .footer-col a:hover {
+      color: #00a8ff;
+    }
+
+    .footer-strong {
+      color: white;
+      font-weight: 900;
+    }
+
+    .footer-icons {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .footer-icons img {
+      width: 38px;
+      height: 38px;
+      display: block;
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      text-align: center;
+      color: #d8e8f7;
+      font-size: 15px;
+    }
+
+    @media (max-width: 950px) {
+      .logo {
+        height: 90px;
+      }
+
+      .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 20px;
+      }
+
+      .nav-right {
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .service-hero h1 {
+        font-size: 40px;
+      }
+
+      .service-hero p {
+        font-size: 18px;
+      }
+
+      .two-col,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box h2 {
+        font-size: 28px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-inner {
+        text-align: center;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+
+      .footer-logo {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html">
+      <img class="logo" src="logo.png" alt="FreezePoint logo">
+    </a>
+
+    <div class="nav-right">
+      <a href="index.html">HOME</a>
+      <a class="active" href="index.html#services">SERVICES</a>
+      <a href="index.html#vehicle-types">VEHICLES</a>
+      <a href="index.html#areas">AREAS COVERED</a>
+      <a href="faq.html">FAQ</a>
+      <a href="index.html#contact">CONTACT</a>
+
+      <div class="social-icons">
+        <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="service-hero">
+    <h1>Car AC Regas in Greater Manchester</h1>
+    <p>
+      Professional vehicle air conditioning gas refill and AC regas service from FreezePoint.
+      Workshop and mobile appointments available across Greater Manchester and surrounding areas.
+    </p>
+  </header>
+
+  <main class="content-wrap">
+
+    <section class="intro-card">
+      <h2>Vehicle Air Conditioning Gas Refill</h2>
+      <p>
+        If your car AC is blowing warm air, cooling weakly, or taking too long to cool the cabin,
+        your system may need an AC regas. FreezePoint provides professional car AC regas and vehicle air conditioning
+        gas refill services for cars, vans, SUVs, taxis, fleet vehicles and light commercial vehicles.
+      </p>
+    </section>
+
+    <div class="two-col">
+
+      <section class="info-card">
+        <h2>Signs You May Need an AC Regas</h2>
+        <ul>
+          <li>Your car AC is blowing warm or mildly cool air</li>
+          <li>The air conditioning is not as cold as before</li>
+          <li>The system takes too long to cool the vehicle</li>
+          <li>Your AC has not been serviced for a long time</li>
+          <li>You need a vehicle AC gas refill before summer</li>
+        </ul>
+      </section>
+
+      <section class="info-card">
+        <h2>Why Choose FreezePoint?</h2>
+        <ul>
+          <li>Vehicle air conditioning specialists</li>
+          <li>Workshop and mobile service available</li>
+          <li>Honest advice before regassing</li>
+          <li>Leak diagnosis and pressure testing available</li>
+          <li>Service available across Greater Manchester and surrounding areas</li>
+        </ul>
+      </section>
+
+    </div>
+
+    <section class="notice-box">
+      <h2>Before Regassing Your Vehicle</h2>
+      <p>
+        A regas is suitable when the AC system is simply low on refrigerant. However, if your vehicle AC loses gas quickly,
+        stops cooling soon after a refill, or does not hold pressure, a leak diagnosis or pressure test may be required first.
+        This helps avoid wasting gas and helps identify the real fault properly.
+      </p>
+    </section>
+
+    <div class="two-col">
+
+      <section class="info-card">
+        <h2>Workshop & Mobile AC Regas</h2>
+        <p>
+          FreezePoint offers workshop and mobile vehicle AC service where possible. Mobile appointments may be available
+          at your home, workplace or roadside depending on location, access and the type of work required.
+        </p>
+      </section>
+
+      <section class="info-card">
+        <h2>Related AC Services</h2>
+        <p>
+          If your AC issue is more than a simple gas refill, FreezePoint can also help with leak diagnosis,
+          compressor diagnosis, hydrogen leak testing, pressure testing and AC fault finding.
+        </p>
+      </section>
+
+    </div>
+
+    <section class="areas-box">
+      <h2>Areas Covered</h2>
+      <p>
+        FreezePoint provides car AC regas and vehicle air conditioning service across Greater Manchester and surrounding areas.
+      </p>
+
+      <div class="area-list">
+        <span>Greater Manchester</span>
+        <span>Manchester</span>
+        <span>Wigan</span>
+        <span>Blackpool</span>
+        <span>Preston</span>
+        <span>Huddersfield</span>
+        <span>Halifax</span>
+        <span>Warrington</span>
+        <span>Lymm</span>
+        <span>Knutsford</span>
+        <span>Blackburn</span>
+        <span>Chorley</span>
+        <span>Burnley</span>
+        <span>Surrounding Areas</span>
+      </div>
+    </section>
+
+    <section class="cta-box">
+      <h2>Need a Car AC Regas?</h2>
+      <p>
+        Call or WhatsApp FreezePoint with your vehicle make, model, location and AC issue.
+        We’ll advise whether a regas or diagnosis is the best next step.
+      </p>
+
+      <div class="cta-buttons">
+        <a class="btn btn-call" href="tel:+447401920022">📞 Call +44 7401 920022</a>
+        <a class="btn btn-whatsapp" href="https://wa.me/447401920022" target="_blank">💬 WhatsApp for a Quote</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div class="footer-col">
+        <img class="footer-logo" src="logo.png" alt="FreezePoint logo">
+        <p>
+          <span class="footer-strong">FreezePoint</span> provides vehicle air conditioning regas, diagnostics,
+          leak testing, pressure testing and compressor fault finding across Greater Manchester and surrounding areas.
+        </p>
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/freezepointuk.aircon/" target="_blank" aria-label="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+          </a>
+
+          <a href="https://www.instagram.com/freezepointaircongasrefill/" target="_blank" aria-label="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+          </a>
+
+          <a href="https://wa.me/447401920022" target="_blank" aria-label="WhatsApp">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact FreezePoint</h3>
+        <a href="tel:+447401920022">📞 +44 7401 920022</a>
+        <a href="https://wa.me/447401920022" target="_blank">💬 WhatsApp Us</a>
+        <a href="https://share.google/j4yk6cmoqHJZRJAdz" target="_blank">⭐ Read Google Reviews</a>
+        <p><span class="footer-strong">Availability:</span><br>Workshop and mobile appointments available. Contact us for current availability.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Service Area</h3>
+        <p>
+          Greater Manchester, Manchester, Wigan, Blackpool, Preston, Huddersfield,
+          Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley, Burnley and surrounding areas.
+        </p>
+        <p><span class="footer-strong">Workshop & mobile service available.</span></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 FreezePoint. Vehicle Air Conditioning Specialists. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
