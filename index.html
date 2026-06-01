@@ -385,6 +385,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
+      margin-bottom: 24px;
     }
 
     .vehicle-list div {
@@ -394,6 +395,44 @@
       padding: 14px;
       font-weight: 800;
       text-align: center;
+    }
+
+    .fleet-pricing {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 14px;
+      padding: 22px;
+      margin-top: 8px;
+    }
+
+    .fleet-pricing h3 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      font-weight: 900;
+    }
+
+    .fleet-pricing p {
+      font-size: 17px;
+      margin-bottom: 16px;
+      max-width: 900px;
+    }
+
+    .fleet-pricing a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      color: #061a33;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 900;
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+
+    .fleet-pricing .whatsapp-link {
+      background: #25d366;
+      color: white;
     }
 
     .bottom-grid {
@@ -552,6 +591,12 @@
 
       .service-card {
         min-height: auto;
+      }
+
+      .fleet-pricing a {
+        display: flex;
+        width: 100%;
+        margin-right: 0;
       }
     }
   </style>
@@ -719,6 +764,17 @@
         <div>Fleet Vehicles</div>
         <div>Taxis & Private Hire</div>
         <div>Company Vehicles</div>
+      </div>
+
+      <div class="fleet-pricing">
+        <h3>Fleet & Multi-Vehicle Pricing Available</h3>
+        <p>
+          Have multiple vehicles that need AC regas or diagnostics? Contact FreezePoint for special pricing
+          on fleet, taxi, company, garage and multi-car bookings.
+        </p>
+
+        <a href="tel:+447401920022">Call for fleet pricing</a>
+        <a class="whatsapp-link" href="https://wa.me/447401920022" target="_blank">Message on WhatsApp</a>
       </div>
     </div>
   </section>
