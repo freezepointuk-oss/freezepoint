@@ -218,31 +218,32 @@
     }
 
     .trust-bar {
-      max-width: 1120px;
-      margin: -38px auto 42px;
-      background: #061a33;
+      max-width: 1240px;
+      margin: -52px auto 52px;
+      background: linear-gradient(135deg, #061a33, #082747);
       color: white;
-      border-radius: 14px;
-      padding: 20px 22px;
+      border-radius: 18px;
+      padding: 28px 30px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      box-shadow: 0 18px 42px rgba(0,0,0,0.32);
       position: relative;
       z-index: 5;
-      border: 1px solid rgba(255,255,255,0.25);
+      border: 1px solid rgba(255,255,255,0.32);
     }
 
     .trust-item {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 11px;
-      padding: 6px 14px;
-      border-right: 1px solid rgba(255,255,255,0.25);
-      font-size: 15px;
-      font-weight: 800;
+      gap: 14px;
+      padding: 10px 18px;
+      border-right: 1px solid rgba(255,255,255,0.28);
+      font-size: 18px;
+      font-weight: 900;
       line-height: 1.25;
       text-align: left;
+      min-height: 78px;
     }
 
     .trust-item:last-child {
@@ -250,7 +251,7 @@
     }
 
     .trust-icon {
-      font-size: 30px;
+      font-size: 42px;
       color: #00a8ff;
       flex: 0 0 auto;
     }
@@ -385,7 +386,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
     }
 
     .vehicle-list div {
@@ -398,36 +399,45 @@
     }
 
     .fleet-pricing {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.28);
-      border-radius: 14px;
-      padding: 22px;
-      margin-top: 8px;
+      background: linear-gradient(135deg, #ffffff, #e8f6ff);
+      color: #061a33;
+      border: 3px solid #ffffff;
+      border-radius: 18px;
+      padding: 32px;
+      margin-top: 12px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.22);
+      transform: scale(1.02);
     }
 
     .fleet-pricing h3 {
-      font-size: 24px;
-      margin-bottom: 8px;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 12px;
       font-weight: 900;
+      color: #061a33;
     }
 
     .fleet-pricing p {
-      font-size: 17px;
-      margin-bottom: 16px;
-      max-width: 900px;
+      font-size: 19px;
+      line-height: 1.55;
+      margin-bottom: 18px;
+      max-width: 930px;
+      color: #061a33;
     }
 
     .fleet-pricing a {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: white;
-      color: #061a33;
-      padding: 13px 20px;
+      background: #061a33;
+      color: white;
+      padding: 15px 22px;
       border-radius: 10px;
       font-weight: 900;
+      font-size: 16px;
       margin-right: 10px;
       margin-top: 8px;
+      min-width: 190px;
     }
 
     .fleet-pricing .whatsapp-link {
@@ -574,14 +584,26 @@
         grid-template-columns: 1fr;
       }
 
+      .trust-bar {
+        max-width: 92%;
+        margin: -35px auto 42px;
+        padding: 24px;
+      }
+
       .trust-item {
         border-right: none;
         border-bottom: 1px solid rgba(255,255,255,0.22);
         justify-content: flex-start;
+        font-size: 17px;
+        min-height: auto;
       }
 
       .trust-item:last-child {
         border-bottom: none;
+      }
+
+      .trust-icon {
+        font-size: 34px;
       }
 
       .contact-box,
@@ -591,6 +613,15 @@
 
       .service-card {
         min-height: auto;
+      }
+
+      .fleet-pricing {
+        transform: none;
+        padding: 28px;
+      }
+
+      .fleet-pricing h3 {
+        font-size: 26px;
       }
 
       .fleet-pricing a {
