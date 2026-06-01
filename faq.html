@@ -139,36 +139,73 @@
     .faq-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 16px;
     }
 
-    .faq-item {
+    details.faq-item {
       background: white;
       border-radius: 16px;
-      padding: 26px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.09);
       border-left: 5px solid #0078ff;
+      overflow: hidden;
     }
 
-    .faq-item h3 {
-      font-size: 22px;
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 24px 58px 24px 26px;
+      font-size: 21px;
       color: #0078ff;
-      margin-bottom: 10px;
       font-weight: 900;
+      position: relative;
     }
 
-    .faq-item p {
+    details.faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 26px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #0078ff;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 26px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    details.faq-item[open] summary::after {
+      content: "−";
+      padding-bottom: 3px;
+    }
+
+    .faq-answer {
+      padding: 0 26px 26px;
       font-size: 17px;
       color: #061a33;
+      border-top: 1px solid #e5eef8;
     }
 
-    .faq-item ul {
+    .faq-answer p {
+      padding-top: 18px;
+    }
+
+    .faq-answer ul {
       margin-top: 10px;
       margin-left: 22px;
       font-size: 17px;
     }
 
-    .faq-item li {
+    .faq-answer li {
       margin-bottom: 6px;
     }
 
@@ -294,6 +331,15 @@
         font-size: 18px;
       }
 
+      details.faq-item summary {
+        font-size: 18px;
+        padding: 22px 56px 22px 22px;
+      }
+
+      .faq-answer {
+        padding: 0 22px 24px;
+      }
+
       .cta-inner h2 {
         font-size: 28px;
       }
@@ -352,112 +398,134 @@
 
     <div class="faq-grid">
 
-      <div class="faq-item">
-        <h3>How do I know if my vehicle AC needs a regas?</h3>
-        <p>
-          Common signs include warm air from the vents, weak cooling, the AC taking too long to cool,
-          or the system not feeling as cold as it used to. A regas may help if the system is low on refrigerant,
-          but if there is a leak, diagnosis may be needed first.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>How do I know if my vehicle AC needs a regas?</summary>
+        <div class="faq-answer">
+          <p>
+            Common signs include warm air from the vents, weak cooling, the AC taking too long to cool,
+            or the system not feeling as cold as it used to. A regas may help if the system is low on refrigerant,
+            but if there is a leak, diagnosis may be needed first.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Can you regas my AC if there is a leak?</h3>
-        <p>
-          If the system has a leak or cannot hold pressure, it may not be suitable to simply refill it.
-          A leak diagnosis or pressure test may be required before regassing. This helps avoid wasting gas
-          and helps identify the cause of the issue properly.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>Can you regas my AC if there is a leak?</summary>
+        <div class="faq-answer">
+          <p>
+            If the system has a leak or cannot hold pressure, it may not be suitable to simply refill it.
+            A leak diagnosis or pressure test may be required before regassing. This helps avoid wasting gas
+            and helps identify the cause of the issue properly.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>What is hydrogen leak testing?</h3>
-        <p>
-          Hydrogen leak testing is used to help detect leaks in a vehicle air conditioning system.
-          It can be useful when a system is losing gas or when a small leak is difficult to find using basic checks.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>What is hydrogen leak testing?</summary>
+        <div class="faq-answer">
+          <p>
+            Hydrogen leak testing is used to help detect leaks in a vehicle air conditioning system.
+            It can be useful when a system is losing gas or when a small leak is difficult to find using basic checks.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Do you offer mobile vehicle AC service?</h3>
-        <p>
-          Yes. FreezePoint offers workshop and mobile service where possible. Mobile service may be available
-          at your home, workplace or roadside depending on your location, access and the type of work required.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>Do you offer mobile vehicle AC service?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes. FreezePoint offers workshop and mobile service where possible. Mobile service may be available
+            at your home, workplace or roadside depending on your location, access and the type of work required.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>What areas do you cover?</h3>
-        <p>
-          FreezePoint covers Greater Manchester and surrounding areas, including Manchester, Wigan, Blackpool,
-          Preston, Huddersfield, Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley and Burnley.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>What areas do you cover?</summary>
+        <div class="faq-answer">
+          <p>
+            FreezePoint covers Greater Manchester and surrounding areas, including Manchester, Wigan, Blackpool,
+            Preston, Huddersfield, Halifax, Warrington, Lymm, Knutsford, Blackburn, Chorley and Burnley.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>What types of vehicles do you service?</h3>
-        <p>
-          FreezePoint works with a wide range of vehicles, including:
-        </p>
-        <ul>
-          <li>Cars</li>
-          <li>Vans</li>
-          <li>4x4s and SUVs</li>
-          <li>MPVs</li>
-          <li>Light commercial vehicles</li>
-          <li>Taxis and private hire vehicles</li>
-          <li>Fleet and company vehicles</li>
-        </ul>
-      </div>
+      <details class="faq-item">
+        <summary>What types of vehicles do you service?</summary>
+        <div class="faq-answer">
+          <p>FreezePoint works with a wide range of vehicles, including:</p>
+          <ul>
+            <li>Cars</li>
+            <li>Vans</li>
+            <li>4x4s and SUVs</li>
+            <li>MPVs</li>
+            <li>Light commercial vehicles</li>
+            <li>Taxis and private hire vehicles</li>
+            <li>Fleet and company vehicles</li>
+          </ul>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Do you offer fleet or multi-vehicle pricing?</h3>
-        <p>
-          Yes. Special pricing may be available for fleet, taxi, company, garage and multi-car bookings.
-          Contact FreezePoint with the number of vehicles and the service required for a quote.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>Do you offer fleet or multi-vehicle pricing?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes. Special pricing may be available for fleet, taxi, company, garage and multi-car bookings.
+            Contact FreezePoint with the number of vehicles and the service required for a quote.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>How long does an AC regas usually take?</h3>
-        <p>
-          Timing can vary depending on the vehicle and the condition of the AC system. A straightforward regas
-          is usually quicker than a full diagnosis or leak test. If there is a fault, leak or compressor issue,
-          extra testing may be required.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>How long does an AC regas usually take?</summary>
+        <div class="faq-answer">
+          <p>
+            Timing can vary depending on the vehicle and the condition of the AC system. A straightforward regas
+            is usually quicker than a full diagnosis or leak test. If there is a fault, leak or compressor issue,
+            extra testing may be required.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>What if my AC stops working again after a regas?</h3>
-        <p>
-          If the AC stops cooling again soon after a regas, this can indicate a leak or another fault in the system.
-          In that case, leak diagnosis, pressure testing or compressor diagnosis may be required.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>What if my AC stops working again after a regas?</summary>
+        <div class="faq-answer">
+          <p>
+            If the AC stops cooling again soon after a regas, this can indicate a leak or another fault in the system.
+            In that case, leak diagnosis, pressure testing or compressor diagnosis may be required.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Can you diagnose compressor problems?</h3>
-        <p>
-          Yes. FreezePoint offers compressor diagnosis and AC fault finding to help identify weak, faulty or
-          non-operating compressor issues, along with related system faults.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>Can you diagnose compressor problems?</summary>
+        <div class="faq-answer">
+          <p>
+            Yes. FreezePoint offers compressor diagnosis and AC fault finding to help identify weak, faulty or
+            non-operating compressor issues, along with related system faults.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>Should I book a regas or a diagnosis?</h3>
-        <p>
-          If your AC is simply not as cold as before, a regas may be suitable. If the system has lost gas quickly,
-          is not holding pressure, makes unusual noises, or has stopped working completely, a diagnosis may be the better first step.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>Should I book a regas or a diagnosis?</summary>
+        <div class="faq-answer">
+          <p>
+            If your AC is simply not as cold as before, a regas may be suitable. If the system has lost gas quickly,
+            is not holding pressure, makes unusual noises, or has stopped working completely, a diagnosis may be the better first step.
+          </p>
+        </div>
+      </details>
 
-      <div class="faq-item">
-        <h3>How do I book?</h3>
-        <p>
-          Call or WhatsApp FreezePoint with your vehicle details, location and AC issue.
-          We can then advise the best next step and arrange a suitable appointment.
-        </p>
-      </div>
+      <details class="faq-item">
+        <summary>How do I book?</summary>
+        <div class="faq-answer">
+          <p>
+            Call or WhatsApp FreezePoint with your vehicle details, location and AC issue.
+            We can then advise the best next step and arrange a suitable appointment.
+          </p>
+        </div>
+      </details>
 
     </div>
 
