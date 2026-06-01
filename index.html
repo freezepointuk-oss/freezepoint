@@ -430,10 +430,14 @@
       border-radius: 18px;
       padding: 34px;
       box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+    }
+
+    .reviews-top {
       display: grid;
       grid-template-columns: 90px 1fr auto;
       gap: 22px;
       align-items: center;
+      margin-bottom: 26px;
     }
 
     .reviews-icon {
@@ -486,6 +490,43 @@
     .reviews-button:hover {
       transform: translateY(-2px);
       opacity: 0.94;
+    }
+
+    .review-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .review-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      border-left: 5px solid #0078ff;
+      min-height: 235px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .review-card .stars {
+      color: #f5b400;
+      font-size: 20px;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .review-card p {
+      font-size: 16px;
+      color: #061a33;
+      margin-bottom: 18px;
+    }
+
+    .review-name {
+      font-weight: 900;
+      color: #0078ff;
+      font-size: 16px;
     }
 
     .services-grid {
@@ -816,7 +857,8 @@
       .bottom-grid,
       .vehicle-list,
       .how-grid,
-      .reviews-box {
+      .reviews-top,
+      .review-cards {
         grid-template-columns: 1fr;
       }
 
@@ -849,7 +891,7 @@
         grid-template-columns: 1fr;
       }
 
-      .reviews-box {
+      .reviews-top {
         text-align: center;
       }
 
@@ -1030,19 +1072,47 @@
 
   <section class="google-reviews">
     <div class="reviews-box">
-      <div class="reviews-icon">G</div>
+      <div class="reviews-top">
+        <div class="reviews-icon">G</div>
 
-      <div>
-        <h2>Trusted by Local Drivers</h2>
-        <div class="reviews-stars">★★★★★</div>
-        <p>
-          FreezePoint has 30+ Google reviews from drivers across Greater Manchester and surrounding areas.
-        </p>
+        <div>
+          <h2>Trusted by Local Drivers</h2>
+          <div class="reviews-stars">★★★★★</div>
+          <p>
+            FreezePoint has 30+ Google reviews from drivers across Greater Manchester and surrounding areas.
+          </p>
+        </div>
+
+        <a class="reviews-button" href="https://share.google/j4yk6cmoqHJZRJAdz" target="_blank">
+          Read Our Google Reviews
+        </a>
       </div>
 
-      <a class="reviews-button" href="https://share.google/j4yk6cmoqHJZRJAdz" target="_blank">
-        Read Our Google Reviews
-      </a>
+      <div class="review-cards">
+        <div class="review-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p>“Very helpful and professional staff. I recommend them 100% 👌”</p>
+          </div>
+          <div class="review-name">Abdul M. — Google Review</div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p>“I had a great experience with this company. Friendly guy and professional work. Thank you 👍👍”</p>
+          </div>
+          <div class="review-name">Naeem A. — Google Review</div>
+        </div>
+
+        <div class="review-card">
+          <div>
+            <div class="stars">★★★★★</div>
+            <p>“Great service! Had my car AC gas refilled and the difference was noticeable immediately. The work was done quickly, professionally, and at a fair price.”</p>
+          </div>
+          <div class="review-name">Irfan R. — Google Review</div>
+        </div>
+      </div>
     </div>
   </section>
 
