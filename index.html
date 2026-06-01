@@ -113,11 +113,13 @@
       display: block;
     }
 
-    .hero-services {
-      font-size: 22px;
-      line-height: 1.45;
-      margin-bottom: 18px;
-    }
+   .hero-services {
+  font-size: 21px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+  max-width: 520px;
+  text-align: left;
+}
 
     .blue-dot {
       color: #00a8ff;
@@ -125,14 +127,16 @@
     }
 
     .hero-location {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      font-size: 18px;
-      max-width: 540px;
-      margin-bottom: 28px;
-      color: #eaf6ff;
-    }
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  align-items: start;
+  font-size: 17px;
+  line-height: 1.45;
+  max-width: 520px;
+  margin-bottom: 28px;
+  color: #eaf6ff;
+}
 
     .pin {
       color: #00a8ff;
@@ -140,24 +144,28 @@
       line-height: 1;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
+   .hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 520px;
+}
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 16px 22px;
-      border-radius: 10px;
-      font-weight: 900;
-      font-size: 17px;
-      min-height: 66px;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 10px;
+  padding: 15px 22px;
+  font-size: 16px;
+  font-weight: 900;
+  min-height: 68px;
+  min-width: 210px;
+  text-align: left;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
 
     .btn:hover {
       transform: translateY(-2px);
@@ -528,17 +536,16 @@
     <div class="hero-text">
       <h1>Vehicle Air Conditioning <span>Specialists</span></h1>
 
-      <div class="hero-services">
-        AC Regas <span class="blue-dot">•</span>
-        Leak Diagnosis <span class="blue-dot">•</span>
-        Compressor Testing
-        <br>
-        Hydrogen Leak Detection
-      </div>
+     <div class="hero-services">
+  AC Regas <span class="blue-dot">•</span>
+  Leak Diagnosis <span class="blue-dot">•</span>
+  Compressor Testing <span class="blue-dot">•</span>
+  Hydrogen Leak Detection
+</div>
 
       <div class="hero-location">
         <div class="pin">📍</div>
-        <div>Workshop & Mobile Service Available Across Greater Manchester and Surrounding Areas</div>
+<div>Workshop & mobile service available across Greater Manchester and surrounding areas.</div>
       </div>
 
       <div class="hero-buttons">
