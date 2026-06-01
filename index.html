@@ -296,7 +296,7 @@
       box-shadow: 0 10px 26px rgba(0,0,0,0.10);
       display: flex;
       flex-direction: column;
-      min-height: 390px;
+      min-height: 430px;
       transition: transform 0.2s ease;
     }
 
@@ -305,17 +305,21 @@
     }
 
     .service-image {
-      height: 170px;
-      background: #dceaf8;
+      height: 215px;
+      background: #020b18;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .service-image img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
       display: block;
+      background: #020b18;
     }
 
     .service-content {
@@ -615,6 +619,10 @@
         min-height: auto;
       }
 
+      .service-image {
+        height: 230px;
+      }
+
       .fleet-pricing {
         transform: none;
         padding: 28px;
@@ -710,7 +718,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="ac-regas.png" alt="Vehicle AC gas refill and regas service">
+          <img src="ac-regas-service.png" alt="Vehicle AC gas refill and regas service">
         </div>
         <div class="service-content">
           <h3>AC Gas Refill / Regas</h3>
@@ -721,7 +729,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="diagnostics.png" alt="Vehicle AC leak diagnosis">
+          <img src="leak-diagnosis-service.png" alt="Vehicle AC leak diagnosis">
         </div>
         <div class="service-content">
           <h3>Leak Diagnosis</h3>
@@ -732,7 +740,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="mobile-service.png" alt="Mobile vehicle AC service">
+          <img src="mobile-ac-service.png" alt="Mobile vehicle AC service">
         </div>
         <div class="service-content">
           <h3>Mobile AC Service</h3>
@@ -743,7 +751,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="diagnostics.png" alt="Vehicle AC compressor diagnosis">
+          <img src="compressor-diagnosis-service.png" alt="Vehicle AC compressor diagnosis">
         </div>
         <div class="service-content">
           <h3>Compressor Diagnosis</h3>
@@ -754,7 +762,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="collage.png" alt="Vehicle AC hydrogen leak testing">
+          <img src="hydrogen-leak-testing-service.png" alt="Vehicle AC hydrogen leak testing">
         </div>
         <div class="service-content">
           <h3>Hydrogen Leak Testing</h3>
@@ -765,7 +773,7 @@
 
       <div class="service-card">
         <div class="service-image">
-          <img src="ac-regas.png" alt="Vehicle AC pressure testing">
+          <img src="pressure-testing-service.png" alt="Vehicle AC pressure testing">
         </div>
         <div class="service-content">
           <h3>Pressure Testing</h3>
