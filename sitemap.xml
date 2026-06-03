@@ -5,6 +5,10 @@
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://freezepoint.co.uk/booking.html</loc>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://freezepoint.co.uk/ac-regas.html</loc>
     <priority>0.90</priority>
   </url>
