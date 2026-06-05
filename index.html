@@ -70,18 +70,20 @@
       padding-bottom: 8px;
     }
 
-    .nav-dropdown {
+  .nav-dropdown {
   position: relative;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
 }
 
 .dropdown-toggle {
+  background: none;
+  border: none;
   color: white;
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.2px;
   cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .dropdown-toggle::after {
@@ -92,14 +94,15 @@
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 28px;
   left: 0;
   background: #020b18;
-  min-width: 245px;
+  min-width: 250px;
   border-radius: 10px;
   padding: 10px 0;
   box-shadow: 0 12px 28px rgba(0,0,0,0.28);
-  z-index: 9999;
+  z-index: 99999;
+  text-align: left;
 }
 
 .dropdown-menu a {
@@ -116,7 +119,7 @@
   color: #00a8ff;
 }
 
-.nav-dropdown:hover .dropdown-menu {
+.nav-dropdown.open .dropdown-menu {
   display: block;
 }
     .social-icons {
@@ -1107,17 +1110,19 @@
     <a class="active" href="index.html">HOME</a>
 
     <div class="nav-dropdown">
-      <a class="dropdown-toggle" href="index.html#services">SERVICES</a>
+  <button class="dropdown-toggle" type="button" onclick="toggleServicesDropdown()">
+    SERVICES
+  </button>
 
-      <div class="dropdown-menu">
-        <a href="ac-regas.html">AC Regas</a>
-        <a href="leak-diagnosis.html">Leak Diagnosis</a>
-        <a href="mobile-ac-service.html">Mobile AC Service</a>
-        <a href="compressor-diagnosis.html">Compressor Diagnosis</a>
-        <a href="hydrogen-leak-testing.html">Hydrogen Leak Testing</a>
-        <a href="pressure-testing.html">Pressure Testing</a>
-      </div>
-    </div>
+  <div class="dropdown-menu" id="servicesDropdown">
+    <a href="ac-regas.html">AC Regas</a>
+    <a href="leak-diagnosis.html">Leak Diagnosis</a>
+    <a href="mobile-ac-service.html">Mobile AC Service</a>
+    <a href="compressor-diagnosis.html">Compressor Diagnosis</a>
+    <a href="hydrogen-leak-testing.html">Hydrogen Leak Testing</a>
+    <a href="pressure-testing.html">Pressure Testing</a>
+  </div>
+</div>
 
     <a href="index.html#vehicle-types">VEHICLES</a>
     <a href="index.html#areas">AREAS COVERED</a>
@@ -1500,6 +1505,21 @@
       © 2026 FreezePoint. Vehicle Air Conditioning Specialists. All rights reserved.
     </div>
   </footer>
+
+<script>
+  function toggleServicesDropdown() {
+    var dropdown = document.querySelector(".nav-dropdown");
+    dropdown.classList.toggle("open");
+  }
+
+  document.addEventListener("click", function(event) {
+    var dropdown = document.querySelector(".nav-dropdown");
+
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+</script>
 
 </body>
 </html>
